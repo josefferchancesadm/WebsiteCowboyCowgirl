@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -15,13 +15,27 @@ body {
 }
 
 #header {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(25, 15, 15, 0.657), rgb(17, 11, 11)),
-    url(images/background.png);
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(rgba(25, 15, 15, 0.1), rgb(17, 11, 11)),
+    url(images/cowboycowgirl2.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  animation: animaheader 3s ease;
 }
+
+
+@keyframes animaheader {
+  from {
+    background-position: left;       
+  }
+  to {
+    background-position: right;    
+  }
+}
+
 
 .container {
   padding: 10px 10%;
@@ -35,7 +49,8 @@ nav {
 }
 
 .logo {
-  width: 140px;
+  width: 180px;
+  box-shadow: 2px 2px 3px #ababab;
 }
 
 nav ul li {
@@ -49,6 +64,11 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+  transition: all 0.5s;
+}
+
+nav ul li a:hover {
+  color: #ddd8d8;
 }
 
 nav ul li a::after {
@@ -411,47 +431,49 @@ nav .fa {
     background: #bb0808;
     position: fixed;
     top: 0;
-    left: 0;    
+    left: 0;
     width: 250px;
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
     transition: left 0.5s ease;
   }
-  nav ul li{
+  nav ul li {
     display: block;
     margin: 25px;
   }
-  nav ul .fa{
+  nav ul .fa {
     position: absolute;
     top: 25px;
     left: 45px;
-    cursor: pointer;    
+    cursor: pointer;
   }
-  .sub-titulo{
+  .sub-titulo {
     font-size: 40px;
   }
-  .about-col-1, .about-col-2{
+  .about-col-1,
+  .about-col-2 {
     flex-basis: 100%;
   }
-  .about-col-1{
+  .about-col-1 {
     margin-bottom: 30px;
   }
-  .about-col-2{
+  .about-col-2 {
     font-size: 14px;
   }
-  .tab-links{
+  .tab-links {
     font-size: 16px;
     margin-right: 20px;
   }
-  .contact-left, .contact-right{
+  .contact-left,
+  .contact-right {
     flex-basis: 100%;
   }
-  .copyright{
+  .copyright {
     font-size: 12px;
   }
 }
-#msg{
+#msg {
   color: #61b752;
   margin-top: -40px;
   display: block;
