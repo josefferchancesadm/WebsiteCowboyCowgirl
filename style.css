@@ -88,8 +88,11 @@ nav ul li a:hover::after {
 }
 
 .header-text {
+  position: relative;
   margin-top: 20%;
   font-size: 30px;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .header-text h1 {
@@ -100,6 +103,34 @@ nav ul li a:hover::after {
 .header-text h1 span {
   color: #bb0808;
   text-shadow: 3px 2px 5px #ffffff82;
+}
+
+.foneimg {
+  position:absolute;
+  top: 450px;
+  left: 140px;
+  width: 450px;  
+  z-index: 0;  
+  animation: animafoneimg 6s forwards ease-in-out;
+  
+}
+
+@keyframes animafoneimg {
+  from {
+    left: -250px;
+    opacity: 0;
+
+  }
+  to {
+    left: 100px;
+    opacity: 1;
+  }
+  
+}
+
+.foneimg img {
+  width: 450px;  
+  /* height: 150px; */
 }
 
 /* -------------about------------- */
@@ -414,12 +445,24 @@ nav .fa {
 @media (max-width: 769px) {
   #header {
     background-image: linear-gradient(rgba(25, 15, 15, 0.657), rgb(17, 11, 11)),
-      url(images/phone-background.png);
+      url(images/cowboycowgirl2.png);
   }
   .header-text {
+    position: relative;
     margin-top: 100%;
     font-size: 16px;
   }
+
+  .foneimg {    
+    position: absolute;
+    right: 10;
+    top: 430px;
+  }
+
+  .foneimg img {    
+    width: 200px;
+  }
+
   .header-text h1 {
     font-size: 30px;
   }
