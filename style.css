@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Smokum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Ruslan+Display&family=Smokum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Ruslan+Display&family=Sancreek&family=Smokum&display=swap');
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Reggae One', cursive; 
+  /* font-family: "Poppins", sans-serif; */
 }
 html {
   scroll-behavior: smooth;
@@ -16,13 +22,14 @@ body {
 
 #header {
   position: relative;
-  width: 100%;
+  width: 99%;
   height: 100vh;
-  background-image: linear-gradient(rgba(25, 15, 15, 0.1), rgb(17, 11, 11)),
-    url(images/cowboycowgirl2.png);
+  background-image: 
+    url(images/cowboycowgirl25.png);
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
+  overflow: hidden;
   animation: animaheader 3s ease;
 }
 
@@ -62,13 +69,14 @@ nav ul li {
 nav ul li a {
   position: relative;
   color: #fff;
+  text-shadow: 2px 2px 2px #000000;
   text-decoration: none;
   font-size: 18px;
   transition: all 0.5s;
 }
 
 nav ul li a:hover {
-  color: #ddd8d8;
+  color: #ff0000;
 }
 
 nav ul li a::after {
@@ -96,23 +104,43 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 {
-  font-size: 60px;
+  font-size: 70px;
+  font-weight: 900;
   margin-top: 20px;
+  font-family: 'Reggae One', cursive;  
 }
 
-.header-text h1 span {
-  color: #bb0808;
-  text-shadow: 3px 2px 5px #ffffff82;
+.header-text h1 span {  
+  position: absolute;
+  top: 15%;
+  left: 28%;
+  color: red;
+  font-size: 65px;
+  font-weight: 900;
+  text-shadow: -3px 2px 2px #000000;
+  font-family: 'Reggae One', cursive;
+}
+
+.jhenifferimg {
+  position: absolute;
+  top: 2vh;
+  left: 10vw;
+  width: 98%;
+  z-index: -1;  
+  opacity: .05;
+}
+
+.jhenifferimg img {
+  width: 92%;
 }
 
 .foneimg {
   position:absolute;
-  top: 450px;
-  left: 140px;
-  width: 450px;  
+  top: 49vh;
+  left: 35vw;  
+  width: 50%;  
   z-index: 0;  
-  animation: animafoneimg 6s forwards ease-in-out;
-  
+  animation: animafoneimg 6s forwards ease-in-out;  
 }
 
 @keyframes animafoneimg {
@@ -129,7 +157,7 @@ nav ul li a:hover::after {
 }
 
 .foneimg img {
-  width: 450px;  
+  width: 50%;  
   /* height: 150px; */
 }
 
@@ -156,7 +184,7 @@ nav ul li a:hover::after {
 .about-col-1 img {
   width: 100%;
   border-radius: 15px;
-  box-shadow: 2px 2px 10px #ababab;
+  box-shadow: 2px 2px 10px #ff0000;
   transition: 0.5s;
 }
 
@@ -444,9 +472,15 @@ nav .fa {
 
 @media (max-width: 769px) {
   #header {
-    background-image: linear-gradient(rgba(25, 15, 15, 0.657), rgb(17, 11, 11)),
-      url(images/cowboycowgirl2.png);
+    background-image:
+      url(images/cowboycowgirl26.png);
+    border-bottom: #000000 solid 2px;
   }
+
+  .jhenifferimg {
+    display: none;
+  }
+
   .header-text {
     position: relative;
     margin-top: 100%;
@@ -454,9 +488,8 @@ nav .fa {
   }
 
   .foneimg {    
-    position: absolute;
-    right: 10;
-    top: 430px;
+    position: absolute;    
+    top: 73vh;
   }
 
   .foneimg img {    
