@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Smokum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Ruslan+Display&family=Smokum&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Ruslan+Display&family=Sancreek&family=Smokum&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Smokum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Smokum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&family=Ruslan+Display&family=Smokum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&family=Ruslan+Display&family=Sancreek&family=Smokum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Noto+Color+Emoji&family=Reggae+One&family=Ruslan+Display&family=Sancreek&family=Smokum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,600;0,700;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Reggae One', cursive; 
+  font-family: "Reggae One", cursive;
   /* font-family: "Poppins", sans-serif; */
 }
 html {
@@ -24,8 +26,7 @@ body {
   position: relative;
   width: 99%;
   height: 100vh;
-  background-image: 
-    url(images/cowboycowgirl25.png);
+  background-image: url(images/cowboycowgirl25.png);
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
@@ -33,16 +34,14 @@ body {
   animation: animaheader 3s ease;
 }
 
-
 @keyframes animaheader {
   from {
-    background-position: left;       
+    background-position: left;
   }
   to {
-    background-position: right;    
+    background-position: right;
   }
 }
-
 
 .container {
   padding: 10px 10%;
@@ -58,6 +57,17 @@ nav {
 .logo {
   width: 180px;
   box-shadow: 2px 2px 3px #ababab;
+  animation: logoanima 5s forwards ease-in-out infinite;
+}
+
+@keyframes logoanima {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 nav ul li {
@@ -107,10 +117,10 @@ nav ul li a:hover::after {
   font-size: 70px;
   font-weight: 900;
   margin-top: 20px;
-  font-family: 'Reggae One', cursive;  
+  font-family: "Reggae One", cursive;
 }
 
-.header-text h1 span {  
+.header-text h1 span {
   position: absolute;
   top: 15%;
   left: 28%;
@@ -118,7 +128,31 @@ nav ul li a:hover::after {
   font-size: 65px;
   font-weight: 900;
   text-shadow: -3px 2px 2px #000000;
-  font-family: 'Reggae One', cursive;
+  font-family: "Reggae One", cursive;
+  animation: headerspananima 3s ease;
+  cursor: pointer;
+  /* animation-delay: 3s; */
+}
+
+.header-text h1 span:hover {
+  color: #000000;  
+  text-shadow: 
+    0 0 10px #f50404, 
+    0 0 20px #f50404,     
+    0 0 40px #f50404;
+  transition: .6s ease-in-out;
+  transform: scale(1.02);  
+}
+
+@keyframes headerspananima {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .jhenifferimg {
@@ -126,8 +160,8 @@ nav ul li a:hover::after {
   top: 2vh;
   left: 10vw;
   width: 98%;
-  z-index: -1;  
-  opacity: .05;
+  z-index: -1;
+  opacity: 0.05;
 }
 
 .jhenifferimg img {
@@ -135,29 +169,27 @@ nav ul li a:hover::after {
 }
 
 .foneimg {
-  position:absolute;
+  position: absolute;
   top: 49vh;
-  left: 35vw;  
-  width: 50%;  
-  z-index: 0;  
-  animation: animafoneimg 6s forwards ease-in-out;  
+  left: 35vw;
+  width: 50%;
+  z-index: 0;
+  animation: animafoneimg 6s forwards ease-in-out;
 }
 
 @keyframes animafoneimg {
   from {
     left: -250px;
     opacity: 0;
-
   }
   to {
     left: 100px;
     opacity: 1;
   }
-  
 }
 
 .foneimg img {
-  width: 50%;  
+  width: 50%;
   /* height: 150px; */
 }
 
@@ -190,23 +222,59 @@ nav ul li a:hover::after {
 
 .about-col-1 img:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 10px #f50404, 0 0 20px #f50404, 0 0 40px #f50404,
+    0 0 80px #f50404;
 }
 
 .about-col-2 {
   flex-basis: 60%;
 }
 
-.sub-titulo {
-  font-size: 60px;
+.about-col-2 p {
+  font-size: 1.3vw;
   font-weight: 600;
+  text-align: justify;
   color: #fff;
+  font-family: "Source Serif Pro", serif;
+  /* font-family: 'Noto Color Emoji', sans-serif; */
 }
 
-.tab-titles {
+.sub-titulo {
+  position: relative;
+  font-size: 60px;
+  font-weight: 600;
+  /* color: #fff; */
+  text-align: center;
+  background-image: linear-gradient(45deg, red, #fff);
+  background-size: 78%;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sub-titulo:hover {
+  transform: scale(1.05);
+}
+
+.sub-titulo::after {
+  content: "";
+  left: 25%;
+  bottom: -1px;
+  width: 0;
+  height: 4px;
+  position: absolute;
+  border-radius: 5px;
+  background: linear-gradient(95deg, #bb0808, #fff);
+  transition: 0.4s;
+}
+
+.sub-titulo:hover::after {
+  width: 51%;
+}
+
+/* .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
-  /* background: #ababab;
-    color: #080808; */
+  margin: 20px 0 40px; 
 }
 
 .tab-links {
@@ -248,7 +316,7 @@ nav ul li a:hover::after {
 
 .tab-contents.active-tab {
   display: block;
-}
+} */
 
 /* -----------------services-------------------- */
 #services {
@@ -270,6 +338,11 @@ nav ul li a:hover::after {
   border-radius: 10px;
   transition: background 0.5s, transform 0.5s;
   box-shadow: 2px 2px 10px #ababab;
+}
+
+.services-list div:hover {
+  box-shadow: 0 0 10px #f50404, 0 0 20px #f50404, 0 0 40px #f50404,
+    0 0 80px #f50404;
 }
 
 .services-list div i {
@@ -308,7 +381,6 @@ nav ul li a:hover::after {
 }
 
 .services-list div:hover {
-  background: #bb0808;
   transform: translateY(-10px);
 }
 
@@ -384,21 +456,44 @@ nav ul li a:hover::after {
 }
 
 .btn {
+  position: relative;
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #bb0808;
+  border: 2px solid #bb0808;
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
   color: #fff;
-  transition: all 0.5s;
-  box-shadow: 2px 2px 5px #ababab;
+  z-index: 1;
+  transition: 0.5s;
+  overflow: hidden;
+  /* box-shadow: 2px 2px 5px #ababab; */
 }
 
 .btn:hover {
+  box-shadow: 0 0 10px #f50404, 0 0 20px #f50404, 0 0 40px #f50404,
+    /* 0 0 80px #f50404, */ 0 0 160px #f50404;
+  font-size: 16px;
+  /* background: #bb0808; */
+  transform: translateY(5px);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 0;
+  height: 100%;
   background: #bb0808;
-  transform: translateY(10px);
+  transform: skewX(35deg);
+  z-index: -1;
+  transition: 1s;
+}
+
+.btn:hover:before {
+  width: 100%;
 }
 
 /* ------------contato------------- */
@@ -472,8 +567,7 @@ nav .fa {
 
 @media (max-width: 769px) {
   #header {
-    background-image:
-      url(images/cowboycowgirl26.png);
+    background-image: url(images/cowboycowgirl26.png);
     border-bottom: #000000 solid 2px;
   }
 
@@ -487,12 +581,12 @@ nav .fa {
     font-size: 16px;
   }
 
-  .foneimg {    
-    position: absolute;    
+  .foneimg {
+    position: absolute;
     top: 73vh;
   }
 
-  .foneimg img {    
+  .foneimg img {
     width: 200px;
   }
 
