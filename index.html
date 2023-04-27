@@ -46,7 +46,7 @@
           <div class="about-col-1">
             <img src="images/cowboycowgirl11.png" />
           </div>
-          <div class="about-col-2">
+          <div class="about-col-2" id="parada">
             <h1 class="sub-titulo">Nossa História</h1>
             <p>
               <span class="letra1">S</span>em ter nenhum conhecimento que seja a
@@ -102,11 +102,13 @@
               cadeira gamer demorou, mas chegou mais um fruto de muito esforço,
               trabalho e dedicação, e hoje posso dizer que em família novamente,
               pois estamos eu cowgirl e vitinho mais uma grata surpresa,
-              calanguinho, nosso pequeno Yuri, que na época era apenas um bebê,
+              calanguinho, que na época era apenas um bebê,
               mas hoje, já encanta com suas participações especiais. Olhando
               para trás e vendo de onde saímos, não temos dúvida nenhuma que
               vamos conseguir chegar ao infinito e além 😂😂😂.
             </p>
+
+            <!-- <button id="id_btn" class="btn">Leia mais</button> -->
 
             <!-- <div class="tab-titles">
               <p class="tab-links active-link" onclick="opentab('habilidade')">
@@ -139,6 +141,7 @@
               </ul>
             </div> -->
           </div>
+          <a href="#parada" class="btn" id="btn_id">Leia mais</a>
         </div>
       </div>
     </div>
@@ -186,7 +189,7 @@
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
-            ></iframe>            
+            ></iframe>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
               sunt placeat perspiciatis labore sed commodi qui amet quod quos
@@ -233,7 +236,6 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn">Saber +</a>
       </div>
     </div>
 
@@ -244,7 +246,15 @@
           <div class="contact-left">
             <h1 class="sub-titulo">Contatos</h1>
             <!-- <p><i class="fa fa-paper-plane"></i>contato@exemplo.com</p> -->
-            <p><i class="fa fa-phone-square"></i>(62) 994681692</p>
+            <div class="social-icons">
+              <a
+                id="whatsapp"
+                href="https://api.whatsapp.com/send?phone=5562994681692"
+                target="_blank"
+                ><i class="fa fa-whatsapp"></i
+              ></a>
+              <span>Fale conosco</span>
+            </div>
             <div class="social-icons">
               <a
                 href="https://www.instagram.com/canalcowboyecowgirl/"
@@ -254,6 +264,7 @@
               <a href="https://youtube.com/@CowboyCowgirl" target="_blank"
                 ><i class="fa fa-youtube-play"></i
               ></a>
+              <span>Síga-nos</span>
             </div>
             <a href="images/my-cv.pdf" download class="btn">Download CV</a>
           </div>
@@ -301,7 +312,19 @@
       }
     </script> -->
     <script>
-      function onclickServices() {}
+      var botaoMais = document.getElementById("btn_id");
+
+      botaoMais.addEventListener("click", function () {
+        var aboutCol2 = document.querySelector(".about-col-2");
+
+        aboutCol2.classList.toggle("active");
+
+        if (aboutCol2.classList.contains("active")) {
+          return (botaoMais.textContent = "Leia menos");
+        }
+
+        botaoMais.textContent = "Ler mais";
+      });
     </script>
 
     <script>

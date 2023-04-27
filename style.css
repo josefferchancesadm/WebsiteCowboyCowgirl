@@ -238,7 +238,31 @@ nav ul li a:hover::after {
 
 .about-col-2 {
   flex-basis: 60%;
+  height: 710px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.8s ease-in-out;
 }
+
+.about-col-2::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  background: linear-gradient(transparent,#080808);
+}
+
+.about-col-2.active {
+  height: auto;
+  transition: all 0.8s;
+}
+
+.about-col-2.active::before {
+  display: none;
+}
+
 
 .about-col-2 p {
   font-size: 1.5rem;
@@ -492,6 +516,7 @@ nav ul li a:hover::after {
   z-index: 1;
   transition: 0.5s;
   overflow: hidden;
+  cursor: pointer;
   /* box-shadow: 2px 2px 5px #ababab; */
 }
 
@@ -531,13 +556,17 @@ nav ul li a:hover::after {
 .contact-left p {
   margin-top: 30px;
 }
-.contact-left p i {
-  color: #bb0808;
+/* .contact-left a {
+  color: #67ff71;
   margin-right: 15px;
-  font-size: 25px;
-}
+  font-size: 35px;  
+} */
 .social-icons {
+  display: flex;
   margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
 }
 .social-icons a {
   text-decoration: none;
@@ -547,10 +576,17 @@ nav ul li a:hover::after {
   display: inline-block;
   transition: transform 0.5s;
 }
+
+.social-icons #whatsapp{
+  color: #67ff71; 
+  font-size: 30px;
+}
+
 .social-icons a:hover {
   color: #bb0808;
   transform: translateY(-5px);
 }
+
 .contact-right form {
   width: 100%;
 }
@@ -669,8 +705,8 @@ nav .fa {
   .about-col-1 {
     margin-bottom: 30px;
   }
-  .about-col-2 {
-    font-size: 14px;
+  .about-col-2 {    
+    font-size: 14px;    
   }
   .tab-links {
     font-size: 16px;
