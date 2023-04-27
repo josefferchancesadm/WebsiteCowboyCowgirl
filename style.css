@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Reggae One", cursive;
+  font-size: 16px;
   /* font-family: "Poppins", sans-serif; */
 }
 html {
@@ -36,7 +37,7 @@ body {
 
 @keyframes animaheader {
   from {
-    background-position: left;
+    background-position: -400px;
   }
   to {
     background-position: right;
@@ -56,7 +57,13 @@ nav {
 
 .logo {
   width: 180px;
-  box-shadow: 2px 2px 3px #ababab;
+  box-shadow: 
+        2px 2px 3px #ababab
+  ;
+  /* box-shadow: 
+    0 0 10px #f50404, 
+    0 0 20px #f50404,     
+    0 0 40px #f50404; */
   animation: logoanima 5s forwards ease-in-out infinite;
 }
 
@@ -81,7 +88,7 @@ nav ul li a {
   color: #fff;
   text-shadow: 2px 2px 2px #000000;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.6rem;
   transition: all 0.5s;
 }
 
@@ -110,31 +117,34 @@ nav ul li a:hover::after {
   margin-top: 20%;
   font-size: 30px;
   z-index: 1;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .header-text h1 {
-  font-size: 70px;
+  font-size: 4rem;
   font-weight: 900;
   margin-top: 20px;
+  text-shadow: 2px 2px 2px #000000;
   font-family: "Reggae One", cursive;
+  text-align: center;
 }
 
-.header-text h1 span {
-  position: absolute;
-  top: 15%;
-  left: 28%;
+.header-text h2{
+  /* position: absolute; */
+  /* top: 16%; */
+  /* left: 27vw; */
   color: red;
-  font-size: 65px;
+  font-size: 4rem;
   font-weight: 900;
   text-shadow: -3px 2px 2px #000000;
   font-family: "Reggae One", cursive;
   animation: headerspananima 3s ease;
+  text-align: center;
   cursor: pointer;
   /* animation-delay: 3s; */
 }
 
-.header-text h1 span:hover {
+.header-text h2:hover {
   color: #000000;  
   text-shadow: 
     0 0 10px #f50404, 
@@ -231,7 +241,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 p {
-  font-size: 1.3vw;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: justify;
   color: #fff;
@@ -239,34 +249,35 @@ nav ul li a:hover::after {
   /* font-family: 'Noto Color Emoji', sans-serif; */
 }
 
+.about-col-2 p span {  
+  font-size: 2rem;
+  color: #ff0000;
+}
+
 .sub-titulo {
   position: relative;
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: 600;
   /* color: #fff; */
   text-align: center;
   background-image: linear-gradient(45deg, red, #fff);
-  background-size: 78%;
+  background-size: contain;
   -webkit-background-clip: text;
   color: transparent;
   transition: transform 0.5s ease-in-out;
 }
 
 .sub-titulo:hover {
+  color: #000000;  
+  text-shadow: 
+    0 0 10px #f50404, 
+    0 0 20px #f50404,     
+    0 0 40px #f50404;
+  transition: .6s ease-in-out;
   transform: scale(1.05);
 }
 
-.sub-titulo::after {
-  content: "";
-  left: 25%;
-  bottom: -1px;
-  width: 0;
-  height: 4px;
-  position: absolute;
-  border-radius: 5px;
-  background: linear-gradient(95deg, #bb0808, #fff);
-  transition: 0.4s;
-}
+
 
 .sub-titulo:hover::after {
   width: 51%;
@@ -325,7 +336,7 @@ nav ul li a:hover::after {
 
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
   gap: 40px;
   margin-top: 50px;
 }
@@ -347,13 +358,18 @@ nav ul li a:hover::after {
 
 .services-list div i {
   font-size: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 30px;  
 }
 
 .services-list div h2 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 15px;
+  text-align: center;
+}
+
+.services-list div p {
+  text-align: justify;
 }
 
 .services-list div a {
@@ -432,6 +448,14 @@ nav ul li a:hover::after {
 .layer h3 {
   font-weight: 500;
   margin-top: 20px;
+}
+
+.layer p {
+  font-size: 1rem;
+}
+
+.layer span {
+  font-size: .8rem;
 }
 
 .layer a {
@@ -565,7 +589,19 @@ nav .fa {
   display: none;
 }
 
+/* @media (max-width: 1405px) {
+   
+  .header-text h1 span {        
+    top: 180px;
+    left: 0;    
+  }
+} */
+
 @media (max-width: 769px) {
+
+  *{
+    font-size: 12px;
+  }
   #header {
     background-image: url(images/cowboycowgirl26.png);
     border-bottom: #000000 solid 2px;
@@ -579,7 +615,7 @@ nav .fa {
     position: relative;
     margin-top: 100%;
     font-size: 16px;
-  }
+  }  
 
   .foneimg {
     position: absolute;
@@ -593,6 +629,11 @@ nav .fa {
   .header-text h1 {
     font-size: 30px;
   }
+
+  .header-text h2{
+    font-size: 2.2rem;
+  }
+
   nav .fa {
     display: block;
     font-size: 25px;
@@ -619,7 +660,7 @@ nav .fa {
     cursor: pointer;
   }
   .sub-titulo {
-    font-size: 40px;
+    font-size: 3rem;
   }
   .about-col-1,
   .about-col-2 {
